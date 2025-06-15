@@ -6,10 +6,9 @@ A Python-based simulation tool for analyzing one-dimensional heat transfer probl
 
 - 1D heat transfer simulation using explicit FDM
 - Support for both Dirichlet and Neumann boundary conditions
-- Configurable heat source
+- Configurable heat source, (Only constant heat source with 2 Dirchlet BC or Dirichlet and Neumann BC and triangular_symmetric with 2 Dirichlet BC are supported with analytical solution comparison)
 - Interactive GUI for parameter input
 - Real-time visualization of temperature distribution
-- Material property customization
 
 ## Requirements
 
@@ -22,13 +21,10 @@ A Python-based simulation tool for analyzing one-dimensional heat transfer probl
 ## Installation
 
 1. Clone the repository:
-`git pull https://github.com/Arviano-Yuono/FDM-explicit.git`
-
+   `git pull https://github.com/Arviano-Yuono/FDM-explicit.git`
 2. Go to the repo directoy
-`cd FDM-explicit`
-
+   `cd FDM-explicit`
 3. Install the dependencies
-`pip install -r requirements.txt`
-
+   `pip install -r requirements.txt`
 4. Run `main.py`
-`python main.py`
+   `python main.py`
