@@ -18,6 +18,8 @@ class HeatSource:
         self.std_dev = std_dev
         self.frequency = frequency
         self.point_index = point_index
+        self.fig = None
+        self.ax = None
         if source_type is not None:
             self.source_title = " ".join([text[0].upper() + text[1:] for text in list(source_type.split("_"))])
             self.source_type = source_type.lower()
@@ -64,13 +66,22 @@ class HeatSource:
     
     def plot(self):
         x = [node.x for node in self.grid.nodes]
-        plt.figure(figsize=(10, 5))
-        plt.plot(x, self.get_source_value_array())
-        plt.xlabel(r"Length (m)")
-        plt.ylabel(r"Heat Generation Rate ($\mathrm{W/m^3}$)")
-        plt.title(rf"{self.source_title} Heat Source")
-        # plt.title(rf"{self.source_type.capitalize()} Heat Source")
-        plt.ylim(0, 1.1*self.source_value)
-        plt.xlim(0, self.grid.length)
-        plt.grid(True)
-        plt.show()
+        
+        # Create figure and axis if they don't exist
+        if self.fig is None:
+            self.fig, self.ax = plt.subplots(figsize=(10, 5))
+        
+        # Clear the axis
+        self.ax.clear()
+        
+        # Plot the data
+        self.ax.plot(x, self.get_source_value_array())
+        self.ax.set_xlabel(r"Length (m)")
+        self.ax.set_ylabel(r"Heat Generation Rate ($\mathrm{W/m^3}$)")
+        self.ax.set_title(rf"{self.source_title} Heat Source")
+        self.ax.set_ylim(0, 1.1*self.source_value)
+        self.ax.set_xlim(0, self.grid.length)
+        self.ax.grid(True)
+        
+        plt.draw()
+        plt.pause(0.001)
