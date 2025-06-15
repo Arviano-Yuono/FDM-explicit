@@ -22,9 +22,9 @@ A Python-based simulation tool for analyzing one-dimensional heat transfer probl
 
 1. Clone the repository:
    `git pull https://github.com/Arviano-Yuono/FDM-explicit.git`
-2. Go to the repo directoy
+2. Go to the repo dir
    `cd FDM-explicit`
 3. Install the dependencies
    `pip install -r requirements.txt`
-4. Run `main.py`
+4. Run `main.py` using
    `python main.py`
