@@ -18,7 +18,6 @@ A Python-based simulation tool for analyzing one-dimensional heat transfer probl
 - Python 3.x
 - numpy
 - matplotlib
-- tkinter
 - tqdm
 
 ## Installation
@@ -28,6 +27,6 @@ A Python-based simulation tool for analyzing one-dimensional heat transfer probl
 2. Go to the repo dir
    `cd FDM-explicit`
 3. Install the dependencies
-   `pip install -r requirements.txt`
+   `pip install -r .\requirements.txt`
 4. Run `main.py` using
    `python main.py`
