@@ -117,8 +117,12 @@ class HeatSimulationGUI:
         ttk.Entry(parent, textvariable=self.error_var, width=10).grid(row=3, column=1, sticky=tk.W)
         
         ttk.Label(parent, text="Use Analytical Solution:").grid(row=4, column=0, sticky=tk.W)
-        self.is_analytical_var = tk.BooleanVar(value=False)
+        self.is_analytical_var = tk.BooleanVar(value=True)
         ttk.Checkbutton(parent, variable=self.is_analytical_var).grid(row=4, column=1, sticky=tk.W)
+        
+        tooltip_text = "Analytical solution is only available for constant heat source with Dirichlet or Neumann BC and triangular symmetric source with Dirichlet BC"
+        tooltip = ttk.Label(parent, text=tooltip_text, wraplength=200, foreground="gray")
+        tooltip.grid(row=5, column=0, columnspan=2, sticky=tk.W, pady=(0, 5))
 
     def create_plotting_tab(self, parent):
         ttk.Label(parent, text="Plotting Properties", font=('Arial', 10, 'bold')).grid(row=0, column=0, columnspan=2, pady=5)
