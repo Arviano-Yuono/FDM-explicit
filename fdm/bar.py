@@ -4,7 +4,6 @@ from IPython.display import clear_output
 import matplotlib.pyplot as plt
 import numpy as np
 from typing import Union, List
-import time
 
 class Bar:
     def __init__(self, 

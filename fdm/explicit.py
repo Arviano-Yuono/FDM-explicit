@@ -1,7 +1,6 @@
 from .grid import Grid
 from tqdm import tqdm
 from .heat_source import HeatSource
-import numpy as np
 class Explicit:
     def __init__(self, 
                  grid: Grid, 
