@@ -6,7 +6,10 @@ A Python-based simulation tool for analyzing one-dimensional heat transfer probl
 
 - 1D heat transfer simulation using explicit FDM
 - Support for both Dirichlet and Neumann boundary conditions
-- Configurable heat source, (Only constant heat source with 2 Dirchlet BC or Dirichlet and Neumann BC and triangular_symmetric with 2 Dirichlet BC are supported with analytical solution comparison)
+- Configurable heat source, with limited support of analytical comparison of:
+  - constant heat source with 2 Dirchlet BC
+  - constant heat source with Dirichlet and Neumann BC
+  - triangle heat source with 2 Dirichlet BC
 - Interactive GUI for parameter input
 - Real-time visualization of temperature distribution
 
